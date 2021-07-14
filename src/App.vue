@@ -1,19 +1,26 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!--Navbar Here -->
+    <div>
+      <nav>
+        <div class="header">
+          <h3>Md Alamin Haque GeoJson</h3>
+        </div>
+      </nav>
+    </div>
+    <!--Index Page Here -->
+    <index />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import index from "./components/index.vue";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    index,
+  },
+};
 </script>
 
 <style>
@@ -21,8 +28,24 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+html,
+body {
+  background: #fafcfd;
+  margin: 0;
+}
+nav {
+  background: #ffffff;
+  box-shadow: 0px 2px 5px rgba(0, 58, 78, 0.15);
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 50px;
+}
+.header h3 {
+  color: #1f2a53;
+  font-weight: 600;
 }
 </style>
